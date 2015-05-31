@@ -7,7 +7,7 @@ pdb_query <- function(url, ...){
   return(XML::xmlToList(httr::content(result)))
 }
 
-#Turns a character vector of file IDs into something consumable by the API
+#Turns a character vector of IDs into something consumable by the API
 format_multiple <- function(ids){
   if(length(ids) == 1){
     return(ids)
