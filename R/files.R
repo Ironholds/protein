@@ -21,6 +21,7 @@
 #'@export
 list_pdbs <- function(type = c("current","obsolete","unreleased"), ...){
 
+  #Make sure type is singular, and switch
   type <- type[1]
   switch(type,
          "current" = {
@@ -33,6 +34,7 @@ list_pdbs <- function(type = c("current","obsolete","unreleased"), ...){
            url <- "getUnreleased"
          },
          {stop("This is not a valid type")})
+
   #Format and return
   result <- pdb_query(url, ...)
   return(unname(unlist(result)))

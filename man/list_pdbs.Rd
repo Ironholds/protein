@@ -4,11 +4,11 @@
 \alias{list_pdbs}
 \title{List Accessible PDB Files}
 \usage{
-list_pdbs(obsolete = FALSE, ...)
+list_pdbs(type = c("current", "obsolete", "unreleased"), ...)
 }
 \arguments{
-\item{obsolete}{whether to retrieve obsolete PDB files (TRUE) or current files
-(FALSE). Set to FALSE by default.}
+\item{type}{whether to retrieve current, obsolete or unreleased PDB files.
+"current" by default.}
 
 \item{...}{further arguments to pass to httr's GET.}
 }
@@ -24,7 +24,7 @@ to either current or obsolete files.
 available_pdb_files <- list_pdbs()
 
 #Get obsolete files
-available_obsolete_files <- list_pdbs(TRUE)
+available_obsolete_files <- list_pdbs("obsolete")
 
 }
 }
