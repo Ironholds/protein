@@ -3,8 +3,8 @@
 #'can then be passed into other functions within \code{protein}. You can filter
 #'to either current or obsolete files.
 #'
-#'@param obsolete whether to retrieve obsolete PDB files (TRUE) or current files
-#'(FALSE). Set to FALSE by default.
+#'@param type whether to retrieve current, obsolete or unreleased PDB files.
+#'"current" by default.
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
@@ -15,19 +15,24 @@
 #'available_pdb_files <- list_pdbs()
 #'
 #'#Get obsolete files
-#'available_obsolete_files <- list_pdbs(TRUE)
+#'available_obsolete_files <- list_pdbs("obsolete")
 #'
 #'}
 #'@export
-list_pdbs <- function(obsolete = FALSE, ...){
+list_pdbs <- function(type = c("current","obsolete","unreleased"), ...){
 
-  #Check what we should be returning
-  if(obsolete){
-    url <- "getObsolete"
-  } else {
-    url <- "getCurrent"
-  }
-
+  type <- type[1]
+  switch(type,
+         "current" = {
+           url <- "getCurrent"
+         },
+         "obsolete" = {
+           url <- "getObsolete"
+         },
+         "unreleased" = {
+           url <- "getUnreleased"
+         },
+         {stop("This is not a valid type")})
   #Format and return
   result <- pdb_query(url, ...)
   return(unname(unlist(result)))
