@@ -59,9 +59,11 @@ list_pdbs <- function(type = c("current","obsolete","unreleased"), ...){
 get_pdb_description <- function(file_ids, ...){
 
   #Check and format
-  file_ids <- format_multiple(file_ids)
-  url <- paste0("describePDB?structureId=", file_ids)
-  return(pdb_query(url, ...))
+  amended_ids <- format_multiple(file_ids)
+  url <- paste0("describePDB?structureId=", amended_ids)
+  result <- pdb_query(url, ...)
+  names(result) <- file_ids
+  return(result)
 }
 
 #'@title Access Information about Entities within PDB Files
@@ -84,7 +86,9 @@ get_pdb_description <- function(file_ids, ...){
 get_pdb_entities <- function(file_ids, ...){
 
   #Check and format
-  file_ids <- format_multiple(file_ids)
-  url <- paste0("getEntityInfo?structureId=", file_ids)
-  return(pdb_query(url, ...))
+  amended_ids <- format_multiple(file_ids)
+  url <- paste0("getEntityInfo?structureId=", amended_ids)
+  result <- pdb_query(url, ...)
+  names(result) <- file_ids
+  return(result)
 }
