@@ -6,6 +6,12 @@
 \usage{
 get_structure_descriptions(structure_ids, ...)
 }
+\arguments{
+\item{...}{further arguments to pass to httr's GET.}
+
+\item{a}{character vector of structure IDs. These can be retrieved from
+file metadata or lists (see \code{\link{list_pdbs}}.)}
+}
 \description{
 Access Descriptions of Structures in PDB Files
 }

@@ -1,5 +1,10 @@
 #'@title Access Descriptions of Structures in PDB Files
 #'
+#'@param a character vector of structure IDs. These can be retrieved from
+#'file metadata or lists (see \code{\link{list_pdbs}}.)
+#'
+#'@param ... further arguments to pass to httr's GET.
+#'
 #'@export
 get_structure_descriptions <- function(structure_ids, ...){
   structure_ids <- format_multiple(structure_ids)
