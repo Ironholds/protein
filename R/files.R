@@ -89,7 +89,6 @@ get_pdb_entities <- function(file_ids, ...){
   amended_ids <- format_multiple(file_ids)
   url <- paste0("getEntityInfo?structureId=", amended_ids)
   result <- pdb_query(url, ...)
-  names(result) <- file_ids
   return(result)
 }
 

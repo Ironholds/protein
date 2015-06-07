@@ -24,3 +24,16 @@ test_that("PDB file descriptions can be retrieved",{
   expect_that(names(results), equals(files))
   expect_that(is.list(results), equals(TRUE))
 })
+
+test_that("PDB entity descriptions can be retrieved",{
+  entities <- c("116L","100D","14PS")
+  results <- get_pdb_entities(entities)
+  expect_that(is.list(results), equals(TRUE))
+})
+
+test_that("PDB individual release statuses can be retrieved",{
+  files <- c("116L","100D","14PS")
+  results <- get_release_status(files)
+  expect_that(names(results), equals(files))
+  expect_that(is.list(results), equals(TRUE))
+})
