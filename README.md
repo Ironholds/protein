@@ -1,6 +1,6 @@
 ## Bindings to the RCSB Protein Data Bank
 
-__Author:__ Oliver Keyes
+__Author:__ Oliver Keyes<br/>
 __License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
 __Status:__ In development
 
