@@ -8,6 +8,7 @@ Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: A client library for the RCSB 'Protein Data Bank' (http://www.rcsb.org/pdb/software/rest.do)
              of information about the structures of proteins.
 License: MIT + file LICENSE
+BugReports: https://github.com/Ironholds/protein/issues
 Depends: httr,
          XML
 Suggests: testthat
