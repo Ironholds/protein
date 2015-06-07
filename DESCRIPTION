@@ -1,11 +1,13 @@
 Package: protein
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1
+Title: Bindings to the 'Protein Data Bank'
+Version: 0.1.0
 Date: 2015-05-31
-Author: Who wrote it
+Author: Oliver Keyes
 Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-LazyData: TRUE
+Description: A client library for the RCSB 'Protein Data Bank' (http://www.rcsb.org/pdb/software/rest.do)
+             of information about the structures of proteins.
+License: MIT + file LICENSE
+Depends: httr,
+         XML
 Suggests: testthat

@@ -7,10 +7,10 @@
 get_chemical_descriptions(chemical_ids, ...)
 }
 \arguments{
-\item{...}{further arguments to pass to httr's GET.}
-
-\item{a}{character vector of chemical IDs. These can be retrieved from (amongst other
+\item{chemical_ids}{a character vector of chemical IDs. These can be retrieved from (amongst other
 things) ligand information - see \code{\link{get_pdb_ligands}}.}
+
+\item{...}{further arguments to pass to httr's GET.}
 }
 \description{
 PDB files and their elements contain individual chemicals as well

@@ -7,10 +7,10 @@
 get_structure_descriptions(structure_ids, ...)
 }
 \arguments{
-\item{...}{further arguments to pass to httr's GET.}
-
-\item{a}{character vector of structure IDs. These can be retrieved from
+\item{structure_ids}{a character vector of structure IDs. These can be retrieved from
 file metadata or lists (see \code{\link{list_pdbs}}.)}
+
+\item{...}{further arguments to pass to httr's GET.}
 }
 \description{
 \code{get_structure_descriptions} retrieves metadata associated

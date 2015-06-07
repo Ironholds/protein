@@ -3,7 +3,7 @@
 #'with particular structures found within PDB files, including the taxonomy and a
 #'description.
 #'
-#'@param a character vector of structure IDs. These can be retrieved from
+#'@param structure_ids a character vector of structure IDs. These can be retrieved from
 #'file metadata or lists (see \code{\link{list_pdbs}}.)
 #'
 #'@param ... further arguments to pass to httr's GET.
@@ -28,7 +28,7 @@ get_structure_descriptions <- function(structure_ids, ...){
 #'as protein structured. Metadata about these chemicals can be retrieved using
 #'\code{get_chemical_descriptions}.
 #'
-#'@param a character vector of chemical IDs. These can be retrieved from (amongst other
+#'@param chemical_ids a character vector of chemical IDs. These can be retrieved from (amongst other
 #'things) ligand information - see \code{\link{get_pdb_ligands}}.
 #'
 #'@param ... further arguments to pass to httr's GET.
