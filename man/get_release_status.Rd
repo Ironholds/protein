@@ -2,7 +2,7 @@
 % Please edit documentation in R/files.R
 \name{get_release_status}
 \alias{get_release_status}
-\title{Retrieve Release Statuses for Entities Within PDB Files}
+\title{Retrieve Release Statuses for PDB Files}
 \usage{
 get_release_status(file_ids, ...)
 }
@@ -14,6 +14,10 @@ these can be retrieved with \code{\link{list_pdbs}}.}
 }
 \description{
 \code{get_release_status} retrieves information about whether
-the entities within PDB files have been released or not.
+individual PDB files have been released or not.
+}
+\examples{
+#Return metadata about the release status of some files
+pdb_released <- get_release_status(c("116L","100D","14PS"))
 }
 

@@ -93,15 +93,19 @@ get_pdb_entities <- function(file_ids, ...){
   return(result)
 }
 
-#'@title Retrieve Release Statuses for Entities Within PDB Files
+#'@title Retrieve Release Statuses for PDB Files
 #'@description \code{get_release_status} retrieves information about whether
-#'the entities within PDB files have been released or not.
+#'individual PDB files have been released or not.
 #'
 #'@param file_ids a character vector of file IDs. If you don't have them to hand,
 #'these can be retrieved with \code{\link{list_pdbs}}.
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
+#'@examples
+#'
+#'#Return metadata about the release status of some files
+#'pdb_released <- get_release_status(c("116L","100D","14PS"))
 #'@export
 get_release_status <- function(file_ids, ...){
   amended_ids <- format_multiple(file_ids)
