@@ -110,3 +110,21 @@ get_release_status <- function(file_ids, ...){
   names(result) <- file_ids
   return(result)
 }
+
+#'@title Retrieve Ligand Information for Entities Within PDB Files
+#'@description \code{get_release_status} retrieves information about the
+#'ligands found in elements in a particular PDB file.
+#'
+#'@param file_ids a character vector of file IDs. If you don't have them to hand,
+#'these can be retrieved with \code{\link{list_pdbs}}.
+#'
+#'@param ... further arguments to pass to httr's GET.
+#'
+#'@export
+get_pdb_ligands <- function(file_ids, ...){
+  amended_ids <- format_multiple(file_ids)
+  url <- paste0("ligandInfo?structureId=", amended_ids)
+  result <- pdb_query(url, ...)
+  names(result) <- file_ids
+  return(result)
+}

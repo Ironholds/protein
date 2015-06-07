@@ -9,4 +9,8 @@ get_chemical_descriptions(chemical_ids, ...)
 \description{
 Access Descriptions of Chemicals in PDB Files
 }
+\examples{
+#Retrieve the description of NAG - n-acetyl-d-glucosamine
+nag_desc <- get_chemical_descriptions("NAG")
+}
 

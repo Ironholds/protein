@@ -4,7 +4,7 @@ pdb_query <- function(url, ...){
   query <- paste0("http://www.rcsb.org/pdb/rest/", url)
   result <- httr::GET(query, httr::user_agent("protein - https://github.com/Ironholds/protein"))
   httr::stop_for_status(result)
-  return(XML::xmlToList(httr::content(result)))
+  return(XML::xmlToList(httr::content(result, type = "text/xml")))
 }
 
 #Turns a character vector of IDs into something consumable by the API

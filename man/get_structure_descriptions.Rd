@@ -13,6 +13,12 @@ get_structure_descriptions(structure_ids, ...)
 file metadata or lists (see \code{\link{list_pdbs}}.)}
 }
 \description{
-Access Descriptions of Structures in PDB Files
+\code{get_structure_descriptions} retrieves metadata associated
+with particular structures found within PDB files, including the taxonomy and a
+description.
+}
+\examples{
+#Get the structure description for 4hhb (hemoglobin)
+hemo_desc <- get_structure_descriptions("4hhb")
 }
 
