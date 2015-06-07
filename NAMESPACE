@@ -3,6 +3,7 @@
 export(get_chemical_descriptions)
 export(get_pdb_description)
 export(get_pdb_entities)
+export(get_release_status)
 export(get_structure_descriptions)
 export(list_pdbs)
 importFrom(XML,xmlToList)

@@ -66,7 +66,7 @@ get_pdb_description <- function(file_ids, ...){
   return(result)
 }
 
-#'@title Access Information about Entities within PDB Files
+#'@title Access Information about Entities Within PDB Files
 #'@description \code{get_pdb_entites} retrieves data about the
 #'content of particular PDB files, and the structures within them.
 #'For obsolete files, this is largely the ID of the file that replaced
@@ -88,6 +88,24 @@ get_pdb_entities <- function(file_ids, ...){
   #Check and format
   amended_ids <- format_multiple(file_ids)
   url <- paste0("getEntityInfo?structureId=", amended_ids)
+  result <- pdb_query(url, ...)
+  names(result) <- file_ids
+  return(result)
+}
+
+#'@title Retrieve Release Statuses for Entities Within PDB Files
+#'@description \code{get_release_status} retrieves information about whether
+#'the entities within PDB files have been released or not.
+#'
+#'@param file_ids a character vector of file IDs. If you don't have them to hand,
+#'these can be retrieved with \code{\link{list_pdbs}}.
+#'
+#'@param ... further arguments to pass to httr's GET.
+#'
+#'@export
+get_release_status <- function(file_ids, ...){
+  amended_ids <- format_multiple(file_ids)
+  url <- paste0("idStatus?structureId=", amended_ids)
   result <- pdb_query(url, ...)
   names(result) <- file_ids
   return(result)

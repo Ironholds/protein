@@ -2,7 +2,7 @@
 % Please edit documentation in R/files.R
 \name{get_pdb_entities}
 \alias{get_pdb_entities}
-\title{Access Information about Entities within PDB Files}
+\title{Access Information about Entities Within PDB Files}
 \usage{
 get_pdb_entities(file_ids, ...)
 }
