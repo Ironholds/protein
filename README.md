@@ -1,5 +1,4 @@
-## protein
-Bindings to the RCSB Protein Data Bank
+## Bindings to the RCSB Protein Data Bank
 
 __Author:__ Oliver Keyes
 __License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
