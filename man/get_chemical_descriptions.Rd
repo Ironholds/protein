@@ -6,8 +6,15 @@
 \usage{
 get_chemical_descriptions(chemical_ids, ...)
 }
+\arguments{
+\item{...}{further arguments to pass to httr's GET.}
+
+\item{a}{character vector of chemical IDs.}
+}
 \description{
-Access Descriptions of Chemicals in PDB Files
+PDB files and their elements contain individual chemicals as well
+as protein structured. Metadata about these chemicals can be retrieved using
+\code{get_chemical_descriptions}.
 }
 \examples{
 #Retrieve the description of NAG - n-acetyl-d-glucosamine

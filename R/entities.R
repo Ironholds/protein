@@ -24,9 +24,18 @@ get_structure_descriptions <- function(structure_ids, ...){
 
 #'@title Access Descriptions of Chemicals in PDB Files
 #'
+#'@description PDB files and their elements contain individual chemicals as well
+#'as protein structured. Metadata about these chemicals can be retrieved using
+#'\code{get_chemical_descriptions}.
+#'
+#'@param a character vector of chemical IDs.
+#'
+#'@param ... further arguments to pass to httr's GET.
+#'
 #'@examples
 #'#Retrieve the description of NAG - n-acetyl-d-glucosamine
 #'nag_desc <- get_chemical_descriptions("NAG")
+#'
 #'@export
 get_chemical_descriptions <- function(chemical_ids, ...){
   amended_ids <- format_multiple(chemical_ids)
