@@ -12,4 +12,12 @@ __Status:__ In development
 
 ### Installation
 
+`protein` is currently still being developed, and so isn't on CRAN yet. But you can still get it!
+
+For the current release:
+
+> devtools::install_github("ironholds/protein", ref = "0.1.0")
+
+For the development version:
+
 > devtools::install_github("ironholds/protein")
