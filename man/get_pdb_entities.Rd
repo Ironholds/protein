@@ -22,4 +22,8 @@ it.
 #Return metadata about the entities within obsolete and non-obsolete PDB files
 pdb_metadata <- get_pdb_entities(c("116L","100D","14PS"))
 }
+\seealso{
+\code{\link{get_structure_descriptions}}, which makes use
+of entity metadata.
+}
 

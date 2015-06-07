@@ -28,7 +28,8 @@ get_structure_descriptions <- function(structure_ids, ...){
 #'as protein structured. Metadata about these chemicals can be retrieved using
 #'\code{get_chemical_descriptions}.
 #'
-#'@param a character vector of chemical IDs.
+#'@param a character vector of chemical IDs. These can be retrieved from (amongst other
+#'things) ligand information - see \code{\link{get_pdb_ligands}}.
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'

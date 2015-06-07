@@ -16,4 +16,12 @@ these can be retrieved with \code{\link{list_pdbs}}.}
 \code{get_release_status} retrieves information about the
 ligands found in elements in a particular PDB file.
 }
+\examples{
+#Return the PDB ligands for 100D
+ligands <- get_pdb_ligands("100D")
+}
+\seealso{
+\code{\link{get_chemical_descriptions}} which uses chemicalIDs found
+within ligand metadata.
+}
 

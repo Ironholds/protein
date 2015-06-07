@@ -20,4 +20,8 @@ individual PDB files have been released or not.
 #Return metadata about the release status of some files
 pdb_released <- get_release_status(c("116L","100D","14PS"))
 }
+\seealso{
+\code{\link{list_pdbs}} for getting all PDBs with a certain release
+status.
+}
 

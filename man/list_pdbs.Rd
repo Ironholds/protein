@@ -28,4 +28,8 @@ available_obsolete_files <- list_pdbs("obsolete")
 
 }
 }
+\seealso{
+\code{\link{get_pdb_description}}, \code{\link{get_pdb_entities}}
+and \code{\link{get_pdb_ligands}}, which make use of PDB file IDs.
+}
 

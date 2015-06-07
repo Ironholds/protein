@@ -8,6 +8,9 @@
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
+#'@seealso \code{\link{get_pdb_description}}, \code{\link{get_pdb_entities}}
+#'and \code{\link{get_pdb_ligands}}, which make use of PDB file IDs.
+#'
 #'@examples
 #'\dontrun{
 #'
@@ -50,6 +53,9 @@ list_pdbs <- function(type = c("current","obsolete","unreleased"), ...){
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
+#'@seealso \code{\link{get_structure_descriptions}}, which makes use
+#'of file description metadata.
+#'
 #'@examples
 #'
 #'#Return metadata about PDB files
@@ -77,6 +83,8 @@ get_pdb_description <- function(file_ids, ...){
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
+#'@seealso \code{\link{get_structure_descriptions}}, which makes use
+#'of entity metadata.
 #'@examples
 #'
 #'#Return metadata about the entities within obsolete and non-obsolete PDB files
@@ -101,6 +109,9 @@ get_pdb_entities <- function(file_ids, ...){
 #'
 #'@param ... further arguments to pass to httr's GET.
 #'
+#'@seealso \code{\link{list_pdbs}} for getting all PDBs with a certain release
+#'status.
+#'
 #'@examples
 #'
 #'#Return metadata about the release status of some files
@@ -122,6 +133,14 @@ get_release_status <- function(file_ids, ...){
 #'these can be retrieved with \code{\link{list_pdbs}}.
 #'
 #'@param ... further arguments to pass to httr's GET.
+#'
+#'@seealso \code{\link{get_chemical_descriptions}} which uses chemicalIDs found
+#'within ligand metadata.
+#'
+#'@examples
+#'
+#'#Return the PDB ligands for 100D
+#'ligands <- get_pdb_ligands("100D")
 #'
 #'@export
 get_pdb_ligands <- function(file_ids, ...){

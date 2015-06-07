@@ -21,4 +21,8 @@ contains, when it was released, and what resolution the underlying data has.
 #Return metadata about PDB files
 pdb_metadata <- get_pdb_description(c("116L","100D","14PS"))
 }
+\seealso{
+\code{\link{get_structure_descriptions}}, which makes use
+of file description metadata.
+}
 
